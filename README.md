@@ -7,21 +7,11 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     </head>
     <body style="margin: 0px; overflow: hidden;">
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-            <!-- Marker setup to detect barcode with value '7' -->
-            <a-marker type='barcode' value='7'>
+        <a-scene embedded arjs>
+            <!-- Marker setup to detect the custom pattern marker -->
+            <a-marker type="pattern" url="https://cdn.discordapp.com/attachments/1278438301887627356/1278445377212780595/pattern-bing_generated_qrcode.patt?ex=66d0d48a&is=66cf830a&hm=48b19abbd451412db3deed287bff334bbd2940eadb56d39ad4f81e1543dc1f12&">
                 <!-- Yellow box to display when marker is detected -->
                 <a-box position="0 0.5 0" color="yellow"></a-box>
-            </a-marker>
-
-            <!-- Optional: Keep the "hiro" marker if you want to use it alongside the barcode -->
-            <a-marker preset="hiro">
-                <!-- Example entity for the "hiro" marker -->
-                <a-entity
-                    position="0 0 0"
-                    scale="0.05 0.05 0.05"
-                    gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf">
-                </a-entity>
             </a-marker>
 
             <!-- Camera setup for AR.js -->
