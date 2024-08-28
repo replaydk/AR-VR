@@ -9,7 +9,7 @@
     <body style="margin: 0px; overflow: hidden;">
         <a-scene embedded arjs>
             <!-- Marker setup to detect the custom pattern marker -->
-            <a-marker type="pattern" url="[https://cdn.discordapp.com/attachments/1278438301887627356/1278445377212780595/pattern-bing_generated_qrcode.patt?ex=66d0d48a&is=66cf830a&hm=48b19abbd451412db3deed287bff334bbd2940eadb56d39ad4f81e1543dc1f12&](https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-bing_generated_qrcode.patt)">
+            <a-marker type="pattern" url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-bing_generated_qrcode.patt">
                 <!-- Yellow box to display when marker is detected -->
                 <a-box position="0 0.5 0" color="yellow"></a-box>
             </a-marker>
