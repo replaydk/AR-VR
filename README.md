@@ -1,6 +1,8 @@
 <div align="center">
 
-<h1>I've been trying to get the index.html to link to the A_frame, I doubt you can see the deployments but at this time I'm at 97, I've tried different methods and I'm not quite sure what I'm missing, but I'll continue to work on that. Thanks Cory! </h1>
+<h1>I've been trying to get the index.html to link to the A_frame, I doubt you can see the deployments but at this time I'm at 97, I've tried different methods and I'm not quite sure what I'm missing, but I'll continue to work on that. Thanks Cory!
+The "IGaveUp.patt" is a QR code to the A_frame as well, but instead of bringing up the camera it opens straight to the A_frame.io website. Ideally, I'd get the QR code to open to this github, run the index, and then URL pull the pattern and display that but I can't quite figure it out.
+ </h1>
 
   <h1>Welcome to the ST: AR/VR & Immersive Media Class (Autumn 2024)</h1>
   <p><strong>Course:</strong> ST: AR/VR & Immersive Media (Sect: 01, 73596)</p>
