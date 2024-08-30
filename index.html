@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
-        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    </head>
-    <body style="margin: 0px; overflow: hidden;">
-        <a-scene embedded arjs>
-            <!-- Marker setup to detect the custom pattern marker -->
-
-            <a-marker type="pattern" url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-qr-code.patt">
-                <!-- Yellow box to display when marker is detected -->
-
-<a-link src= "https://github.com/replaydk/AR-VR/blob/main/A_Frame.html"></a-link>
-
-            </a-marker>
-
-            <!-- Camera setup for AR.js -->
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script>
+    AFRAME.registerComponent('color-changer', {
+      schema: {
+        maxHeight: {type: 'number', default: 2.5},
+        minHeight: {type: 'number', default: 1.25}
+      },
+      tick: function () {
+        var el = this.el;
+        var position = el.getAttribute('position');
+        var heightRatio = (position.y - this.data.minHeight) / (this.data.maxHeight - this.data.minHeight);
+        
+        // Calculate the color based on height (0 at minHeight, 1 at maxHeight)
+        var color = `rgb(${Math.round(255 * (1 - heightRatio))}, ${Math.round(255 * heightRatio)}, 150)`;
+        
+        el.setAttribute('color', color);
+      }
+    });
+  </script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- Marker setup to detect the custom pattern marker -->
+    <a-marker type="pattern" url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-qr-code.patt">
+      <!-- Floating and Color Changing Sphere -->
+      <a-sphere position="0 1.25 0" radius="1.25" color="#EF2D5E" color-changer
+                animation__position="property: position; to: 0 2.5 0; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
+      </a-sphere>
+    </a-marker>
+    
+    <!-- Camera setup for AR.js -->
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
 </html>
