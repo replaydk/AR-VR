@@ -23,13 +23,8 @@
   <body>
     <a-scene>
       <!-- Original ground plane -->
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#000000"></a-plane>
+      <a-plane position="0 0 -5" rotation="-90 0 0" width="4" height="4" color="#000000"></a-plane>
       
-      <!-- Box of planes surrounding the floating sphere, with the front face open -->
-      <a-plane position="0 2 -6" rotation="0 0 0" width="4" height="4" color="#000000"></a-plane> <!-- Back -->
-      <a-plane position="-2 2 -4" rotation="0 90 0" width="4" height="4" color="#000000"></a-plane> <!-- Left -->
-      <a-plane position="2 2 -4" rotation="0 -90 0" width="4" height="4" color="#000000"></a-plane> <!-- Right -->
-      <a-plane position="0 4 -4" rotation="-90 0 0" width="4" height="4" color="#000000"></a-plane> <!-- Top -->
 
       <!-- Floating and Color Changing Sphere -->
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" color-changer
