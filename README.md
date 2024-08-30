@@ -1,4 +1,7 @@
 <div align="center">
+
+<h1>I've been trying to get the index.html to link to the A_frame, I doubt you can see the deployments but at this time I'm at 97, I've tried different methods and I'm not quite sure what I'm missing, but I'll continue to work on that. Thanks Cory! </h1>
+
   <h1>Welcome to the ST: AR/VR & Immersive Media Class (Autumn 2024)</h1>
   <p><strong>Course:</strong> ST: AR/VR & Immersive Media (Sect: 01, 73596)</p>
   <p><strong>Semester:</strong> Autumn 2024</p>
