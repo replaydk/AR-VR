@@ -2,37 +2,18 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>AR and VR Example</title>
+    <title>AR Marker Test</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script>
-      AFRAME.registerComponent('color-changer', {
-        schema: {
-          maxHeight: {type: 'number', default: 2.5},
-          minHeight: {type: 'number', default: 1.25}
-        },
-        tick: function () {
-          var el = this.el;
-          var position = el.getAttribute('position');
-          var heightRatio = (position.y - this.data.minHeight) / (this.data.maxHeight - this.data.minHeight);
-          
-          // Calculate the color based on height (0 at minHeight, 1 at maxHeight)
-          var color = `rgb(${Math.round(255 * (1 - heightRatio))}, ${Math.round(255 * heightRatio)}, 150)`;
-          el.setAttribute('color', color);
-        }
-      });
-    </script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs>
+        <!-- Simple Marker -->
         <a-marker type="pattern" url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-qr-code.patt">
-            <!-- Floating and Color Changing Sphere -->
-            <a-sphere position="0 1.25 0" radius="1.25" color="#EF2D5E" color-changer
-                      animation__position="property: position; to: 0 2.5 0; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
-            </a-sphere>
+            <a-box position="0 0.5 0" rotation="0 45 0" color="#4CC3D9"></a-box>
         </a-marker>
         
+        <!-- Camera -->
         <a-entity camera></a-entity>
     </a-scene>
 </body>
