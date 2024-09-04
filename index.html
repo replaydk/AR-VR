@@ -21,16 +21,15 @@
         }
       });
     </script>
-    <script src="https://cdn.rawgit.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.js"></script>
 </head>
-<body style="margin: 0px; overflow: hidden;">
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
         <a-marker type="pattern" url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-qr-code.patt">
             <!-- Floating and Color Changing Sphere on the marker -->
             <a-sphere position="0 1 0" radius="0.5" color="#EF2D5E" color-changer
                       animation__position="property: position; to: 0 1.5 0; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
-            <!-- Sphere should appear on the detected marker -->
+            </a-sphere>
+            <!-- Additional Sphere -->
             <a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"
                       animation__position="property: position; to: 0 1 0; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
             </a-sphere>
