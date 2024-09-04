@@ -26,14 +26,13 @@
 </head>
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs>
-        <!-- Floating and Color Changing Sphere -->
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" color-changer
-                  animation__position="property: position; to: 0 2.5 -5; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
-        </a-sphere>
-
         <a-marker type="pattern" url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-qr-code.patt">
+            <!-- Floating and Color Changing Sphere -->
+            <a-sphere position="0 1.25 0" radius="1.25" color="#EF2D5E" color-changer
+                      animation__position="property: position; to: 0 2.5 0; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
+            </a-sphere>
         </a-marker>
-
+        
         <a-entity camera></a-entity>
     </a-scene>
 </body>
