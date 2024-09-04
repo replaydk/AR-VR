@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <script
-src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   
    <body 
      style="margin : 0px; overflow: hidden;">
      
 <a-scene embedded arjs>
+
+      <a-assets>
+  <a-asset src="https://discordapp.com/channels/658022373764628480/1278438301887627356/1280923481055170641"></a-asset>
+</a-assets>
+
+
+
+  
 <a-marker type="pattern"
   
-url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-qr-code.patt">
-<a-box position="0 1 0" material="opacity:0.5; color=#f70087;">
+  url="https://raw.githubusercontent.com/replaydk/AR-VR/main/pattern-qr-code.patt">
+  <a-box position="0 1 0" material="opacity:0.5; color=#f70087;">
 
-</a-box>
+  </a-box>
 </a-marker>
   
 <a-entity camera></a-entity>
